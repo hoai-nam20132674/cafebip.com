@@ -76,17 +76,17 @@ class AdvertController extends Controller
             $file = $request->file('ennavatarfile');
             $nameimg = $file->getClientOriginalName(); 
             $hinh = "longtriCo".str_random(6)."_".$nameimg;
-            while(file_exists("img/images_bn/".$hinh))
+            while(file_exists("public/img/images_bn/".$hinh))
             {
                 $hinh = "longtriCo".str_random(6)."_".$nameimg;
             }
-            $file->move("img/images_bn",$hinh);
+            $file->move("public/img/images_bn",$hinh);
             // removefile
             $imgold = $request->ennimguserold;
             if($imgold !="no-img.png"){
-                while(file_exists("img/images_bn/".$imgold))
+                while(file_exists("public/img/images_bn/".$imgold))
                 {
-                    unlink("img/images_bn/".$imgold);
+                    unlink("public/img/images_bn/".$imgold);
                 }
             }
             

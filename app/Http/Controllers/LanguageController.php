@@ -158,40 +158,40 @@ class LanguageController extends Controller
             $file = $request->file('seo_image');
             $nameimg = $file->getClientOriginalName(); 
             $hinh = "nt7solution-".str_random(6)."_".$nameimg;
-            while(file_exists("img/".$hinh))
+            while(file_exists("public/img/".$hinh))
             {
                 $hinh = "nt7solution-".str_random(6)."_".$nameimg;
             }
-            $file->move("img",$hinh);
+            $file->move("public/img",$hinh);
 
             // removefile
             $imgold = $contact->seo_image;
             if($imgold !="no-img.png"){
-                while(file_exists("img/".$imgold))
+                while(file_exists("public/img/".$imgold))
                 {
-                    unlink("img/".$imgold);
+                    unlink("public/img/".$imgold);
                 }
             }
             
-            $contact->seo_image = "img/".$hinh;
+            $contact->seo_image = "public/img/".$hinh;
         }
         // logo
         if($request->hasFile('logo_img')){
             $file = $request->file('logo_img');
             $nameimg = $file->getClientOriginalName(); 
             $hinh = "nt7solution-".str_random(6)."_".$nameimg;
-            while(file_exists("home/".$hinh))
+            while(file_exists("public/home/".$hinh))
             {
                 $hinh = "nt7solution-".str_random(6)."_".$nameimg;
             }
-            $file->move("home",$hinh);
+            $file->move("public/home",$hinh);
 
             // removefile
             $imgold_logo = $contact->logo;
             if(($imgold_logo !="no-img.png") || ($imgold_logo !="")){
-                while(file_exists("home/".$imgold_logo))
+                while(file_exists("public/home/".$imgold_logo))
                 {
-                    unlink("home/".$imgold_logo);
+                    unlink("public/home/".$imgold_logo);
                 }
             }
             
