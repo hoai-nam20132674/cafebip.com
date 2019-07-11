@@ -2,10 +2,10 @@ function ckeditor (name) {
     var editor = CKEDITOR.replace(name ,{
         uiColor : '#9AB8F3',
         language:'vi',
-        filebrowserImageBrowseUrl : baseURL+'/editor/ckfinder/ckfinder.html?Type=Images',
-        filebrowserFlashBrowseUrl : baseURL+'/editor/ckfinder/ckfinder.html?Type=Flash',
-        filebrowserImageUploadUrl : baseURL+'/editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-        filebrowserFlashUploadUrl : baseURL+'/editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
+        filebrowserImageBrowseUrl : baseURL+'/public/editor/ckfinder/ckfinder.html?Type=Images',
+        filebrowserFlashBrowseUrl : baseURL+'/public/editor/ckfinder/ckfinder.html?Type=Flash',
+        filebrowserImageUploadUrl : baseURL+'/public/editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl : baseURL+'/public/editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
         toolbar:[
         ['Cut','Copy','Paste','PasteText','Undo','Redo','-','Replace','-','SelectAll','RemoveFormat','Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
         ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
