@@ -157,6 +157,12 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
+                        <label for="nnkeywords" class="control-label"><i class="fa  fa-note"></i> Keyword:</label>
+                        <div class="col-sx-12 col-md-12">
+                          <textarea name="nnkeywords" class="form-control" rows="4"><?php echo old('nnkeywords'); ?></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="nntomtatnew" class="control-label"><i class="fa  fa-note"></i> Tóm tắt:</label>
                         <div class="col-sx-12 col-md-12">
                           <textarea name="nntomtatnew" class="form-control" rows="4"><?php echo old('nntomtatnew'); ?></textarea>
@@ -270,6 +276,12 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <label for="ennkeywords" class="control-label"><i class="fa  fa-note"></i> Keyword:</label>
+                            <div class="col-xs-12 col-md-12">
+                              <textarea name="ennkeywords" class="form-control" rows="4" id="ennkeywords"><?php echo old('ennkeywords'); ?></textarea>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="enntomtatnew" class="control-label"><i class="fa  fa-note"></i> Tóm tắt:</label>
                             <div class="col-xs-12 col-md-12">
