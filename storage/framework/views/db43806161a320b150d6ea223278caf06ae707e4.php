@@ -1,7 +1,16 @@
-<?php $__env->startSection('title', (!empty($contact)?$contact->seo_title:"")); ?>
+<?php $__env->startSection('title'); ?> 
+	<?php echo e($listnew->listname); ?>
+
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('seo_keyword', (!empty($contact)?$contact->seo_keyword:"")); ?>
-<?php $__env->startSection('seo_description', (!empty($contact)?$contact->seo_description:"")); ?>
-<?php $__env->startSection('seo_image', (!empty($contact)?asset($contact->seo_image):"")); ?>
+<?php $__env->startSection('seo_description'); ?>
+	<?php echo e($listnew->description); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('seo_image'); ?>
+	localhost/cafebip.com/<?php echo e($listnew->listimg); ?>
+
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('seo_url', url()->current()); ?>
 <?php $__env->startSection('content'); ?>
 <!-- BEGIN .wrapper -->

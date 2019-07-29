@@ -1,8 +1,16 @@
 @extends('home.master')
-@section('title', (!empty($contact)?$contact->seo_title:""))
-@section('seo_keyword', (!empty($contact)?$contact->seo_keyword:""))
-@section('seo_description', (!empty($contact)?$contact->seo_description:""))
-@section('seo_image', (!empty($contact)?asset($contact->seo_image):""))
+@section('title') 
+	{{$itemnews->newsname}}
+@endsection
+@section('seo_keyword')
+	{{$itemnews->newkeywords}}
+@endsection
+@section('seo_description')
+	{{$itemnews->newintro}}
+@endsection
+@section('seo_image')
+	http://cafebip.com/img/news/300x300/{{$itemnews->newimg}}
+@endsection
 @section('seo_url', url()->current())
 @section('content')
 <!-- BEGIN .wrapper -->

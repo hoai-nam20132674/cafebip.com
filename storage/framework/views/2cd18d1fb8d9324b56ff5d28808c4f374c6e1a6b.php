@@ -4,6 +4,8 @@
 	<!-- BEGIN head -->
 	<head>
 		<title><?php echo $__env->yieldContent('title'); ?></title> 
+		<meta name="keywords" content="<?php echo $__env->yieldContent('seo_keyword'); ?>" />
+		<meta name="description" content="<?php echo $__env->yieldContent('seo_description'); ?>" />
 		<!-- Meta Tags -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="description" content="" />

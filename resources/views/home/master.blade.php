@@ -4,13 +4,16 @@
 	<!-- BEGIN head -->
 	<head>
 		<title>@yield('title')</title> 
+		<meta name="keywords" content="@yield('seo_keyword')" />
+		<meta name="description" content="@yield('seo_description')" />
 		<!-- Meta Tags -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="description" content="" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
 		<meta name="generator" content="nt7solution.com">
-	    <meta property="fb:app_id" content="{{ (!empty($contact)?$contact->fb_app_id:"") }}" /> 
+	    <meta property="fb:app_id" content="{{ (!empty($contact)?$contact->fb_app_id:"") }}" />
+	    <meta property="fb:admins" content="100004444963017"/> 
 	    <meta property="og:type" content="article" /> 
 	    <meta property="og:title" content="@yield('title')" />
 	    <meta property="og:image" content="@yield('seo_image')" >
@@ -59,7 +62,7 @@
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=1717807391847359";
+		  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId={{ (!empty($contact)?$contact->fb_app_id:"") }}";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 

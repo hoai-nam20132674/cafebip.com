@@ -1,7 +1,19 @@
-<?php $__env->startSection('title', (!empty($contact)?$contact->seo_title:"")); ?>
-<?php $__env->startSection('seo_keyword', (!empty($contact)?$contact->seo_keyword:"")); ?>
-<?php $__env->startSection('seo_description', (!empty($contact)?$contact->seo_description:"")); ?>
-<?php $__env->startSection('seo_image', (!empty($contact)?asset($contact->seo_image):"")); ?>
+<?php $__env->startSection('title'); ?> 
+	<?php echo e($itemnews->newsname); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('seo_keyword'); ?>
+	<?php echo e($itemnews->newkeywords); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('seo_description'); ?>
+	<?php echo e($itemnews->newintro); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('seo_image'); ?>
+	http://cafebip.com/img/news/300x300/<?php echo e($itemnews->newimg); ?>
+
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('seo_url', url()->current()); ?>
 <?php $__env->startSection('content'); ?>
 <!-- BEGIN .wrapper -->
