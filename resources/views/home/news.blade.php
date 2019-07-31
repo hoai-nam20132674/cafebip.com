@@ -133,7 +133,8 @@
 						<h2> Ý kiến của bạn</h2>
 					</div>
 					<div class="content-panel-body comment-list">						
-						<div class="fb-comments" data-href="{{url()->current()}}" data-width="100%" data-numposts="5"></div>
+						<div class="fb-comments" data-href="{{url()->current()}}" data-width="100%" data-numposts="10"></div>
+
 					</div>
 				<!-- END .content-panel -->
 				</div>
